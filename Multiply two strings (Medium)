@@ -1,0 +1,15 @@
+class Solution
+{
+    public String multiplyStrings(String s1,String s2)
+    {
+        //code here.
+        BigDecimal d = new BigDecimal(s1); 
+        BigDecimal d2 = new BigDecimal(s2);
+        BigDecimal d3 = d.multiply(d2);
+         String result = d3.toPlainString();
+        return result;
+    }
+}
+
+//one line solution
+return ((new BigDecimal(s1)).multiply(new BigDecimal(s2))).toString();
