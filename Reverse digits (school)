@@ -1,0 +1,12 @@
+class Solution
+{   long sum = 0;
+    public long reverse_digit(long n) //200
+    {
+    if(n==0){return sum;}
+      sum = sum*10 + n%10; //sum = 0*10 + 200%10 = 0
+      n = n/10; //200/10 = 20
+      return reverse_digit(n); //20
+    }
+}
+
+just calculate reminder and get its last digit 123 = 3 and divide 123 / 10 to get next number 12.
