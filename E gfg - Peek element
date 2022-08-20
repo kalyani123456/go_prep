@@ -1,0 +1,20 @@
+public int peakElement(int[] arr,int n)
+    {
+       //add code here.
+       return search(arr,0,n-1,(n-1)/2);
+    }
+    
+    public int search(int[] a,int l,int h,int m){
+        if(l<=h){
+        if((m==0 || a[m-1]<=a[m]) &&
+        (m==a.length-1 || a[m+1]<=a[m])){
+            return m;
+        }
+        if(m>0 && a[m-1]>=a[m]){
+           return search(a,l,m-1,(l+m-1)/2);
+        }else{
+           return search(a,m+1,h,(h+m+1)/2);
+        }
+        }
+        return -1;
+    }
